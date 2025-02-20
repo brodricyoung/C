@@ -1,0 +1,26 @@
+11:08:44 **** Rebuild of configuration Debug for project W03 Task 1 Submission ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\W03 Task 1 Submission.o" "..\\src\\W03 Task 1 Submission.c" 
+..\src\W03 Task 1 Submission.c: In function 'main':
+..\src\W03 Task 1 Submission.c:19:9: error: implicit declaration of function 'func_1' [-Wimplicit-function-declaration]
+   19 |         func_1(i);
+      |         ^~~~~~
+..\src\W03 Task 1 Submission.c:22:9: error: implicit declaration of function 'func_2' [-Wimplicit-function-declaration]
+   22 |         func_2(&i);
+      |         ^~~~~~
+..\src\W03 Task 1 Submission.c: At top level:
+..\src\W03 Task 1 Submission.c:30:6: warning: conflicting types for 'func_1'; have 'void(int)'
+   30 | void func_1(int num) {
+      |      ^~~~~~
+..\src\W03 Task 1 Submission.c:19:9: note: previous implicit declaration of 'func_1' with type 'void(int)'
+   19 |         func_1(i);
+      |         ^~~~~~
+..\src\W03 Task 1 Submission.c:36:6: warning: conflicting types for 'func_2'; have 'void(int *)'
+   36 | void func_2(int* num) {
+      |      ^~~~~~
+..\src\W03 Task 1 Submission.c:22:9: note: previous implicit declaration of 'func_2' with type 'void(int *)'
+   22 |         func_2(&i);
+      |         ^~~~~~
+
+11:08:44 Build Failed. 2 errors, 2 warnings. (took 190ms)
+

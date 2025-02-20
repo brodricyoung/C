@@ -1,0 +1,7 @@
+11:08:37 **** Rebuild of configuration Debug for project W01 Task Submission ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\W01 Task Submission.o" "..\\src\\W01 Task Submission.c" 
+gcc -o "W01 Task Submission.exe" "src\\W01 Task Submission.o" 
+
+11:08:40 Build Finished. 0 errors, 0 warnings. (took 2s.749ms)
+

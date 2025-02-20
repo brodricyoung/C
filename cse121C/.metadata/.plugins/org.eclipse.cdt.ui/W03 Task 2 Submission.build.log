@@ -1,0 +1,17 @@
+11:08:44 **** Rebuild of configuration Debug for project W03 Task 2 Submission ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\W04 Task 1 _ W03 task 2 addition.o" "..\\src\\W04 Task 1 _ W03 task 2 addition.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\W03 Task 2 Submission.o" "..\\src\\W03 Task 2 Submission.c" 
+gcc -o "W03 Task 2 Submission.exe" "src\\W03 Task 2 Submission.o" "src\\W04 Task 1 _ W03 task 2 addition.o" 
+C:/MinGW/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/bin/ld.exe: src\W04 Task 1 _ W03 task 2 addition.o: in function `input_func':
+C:\Users\young\OneDrive\Documents\C\CSE 121C - C Language\W03 Task 2 Submission\Debug/../src/W04 Task 1 _ W03 task 2 addition.c:25: multiple definition of `input_func'; src\W03 Task 2 Submission.o:C:\Users\young\OneDrive\Documents\C\CSE 121C - C Language\W03 Task 2 Submission\Debug/../src/W03 Task 2 Submission.c:25: first defined here
+C:/MinGW/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/bin/ld.exe: src\W04 Task 1 _ W03 task 2 addition.o: in function `display_single':
+C:\Users\young\OneDrive\Documents\C\CSE 121C - C Language\W03 Task 2 Submission\Debug/../src/W04 Task 1 _ W03 task 2 addition.c:39: multiple definition of `display_single'; src\W03 Task 2 Submission.o:C:\Users\young\OneDrive\Documents\C\CSE 121C - C Language\W03 Task 2 Submission\Debug/../src/W03 Task 2 Submission.c:39: first defined here
+C:/MinGW/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/bin/ld.exe: src\W04 Task 1 _ W03 task 2 addition.o: in function `display_all':
+C:\Users\young\OneDrive\Documents\C\CSE 121C - C Language\W03 Task 2 Submission\Debug/../src/W04 Task 1 _ W03 task 2 addition.c:43: multiple definition of `display_all'; src\W03 Task 2 Submission.o:C:\Users\young\OneDrive\Documents\C\CSE 121C - C Language\W03 Task 2 Submission\Debug/../src/W03 Task 2 Submission.c:43: first defined here
+C:/MinGW/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/bin/ld.exe: src\W04 Task 1 _ W03 task 2 addition.o: in function `main':
+C:\Users\young\OneDrive\Documents\C\CSE 121C - C Language\W03 Task 2 Submission\Debug/../src/W04 Task 1 _ W03 task 2 addition.c:52: multiple definition of `main'; src\W03 Task 2 Submission.o:C:\Users\young\OneDrive\Documents\C\CSE 121C - C Language\W03 Task 2 Submission\Debug/../src/W03 Task 2 Submission.c:52: first defined here
+collect2.exe: error: ld returned 1 exit status
+
+11:08:45 Build Failed. 4 errors, 0 warnings. (took 661ms)
+

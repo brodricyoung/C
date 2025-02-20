@@ -1,0 +1,122 @@
+/*
+ ============================================================================
+ Name        : W03.c
+ Author      : 
+ Version     :
+ Copyright   : Your copyright notice
+ Description : Hello World in C, Ansi-style
+ ============================================================================
+ */
+
+#include <stdio.h>
+#include <stdlib.h>
+
+
+typedef struct bank {
+		int account_num;
+		char name[20];
+		float balance;
+
+		struct bank *next;
+} bank;
+
+
+int menu() {
+	int choice;
+	printf("\nMain Menu:\n   1. Add Account\n   2. Display all accounts\n   3. Find Account\n   0. Quit\n");
+	printf("Your choice: ");
+	scanf("%d", &choice);
+	return choice;
+}
+
+
+
+void add_account(bank **head) {
+	struct bank *a = malloc(sizeof(struct bank));
+	a->next = NULL;
+	printf("Enter the account number: ");
+	scanf("%d", &a->account_num);
+
+	printf("Enter the name of the account: ");
+	scanf("%s", a->name);
+
+	printf("Enter the balance in the account: ");
+	scanf("%g", &a->balance);
+
+	if (*head == NULL) {
+		*head = a;
+	}
+	else {
+		struct bank *tail = *head;
+		while (tail->next != NULL) {
+			tail = tail->next;
+		}
+		tail->next = a;
+	}
+}
+
+
+
+void display_single(bank* account) {
+	printf("\nAccount information:   number %d   name %s   balance $%g\n", account->account_num, account->name, account->balance);
+}
+
+
+
+void display_all(bank *p) {
+	if (p == NULL) {
+		printf("\nThere are no accounts found.\n");
+	}
+	else {
+		struct bank *x = p;
+		while (x != NULL) {
+			display_single(x);
+			x = x->next;
+		}
+	}
+}
+
+
+
+void find_account(bank *head) {
+	int num;
+	printf("\nEnter the account number to find: ");
+	scanf("%d", &num);
+
+	int found = 0;
+	struct bank *a = head;
+	while (a->next != NULL) {
+		if (a->account_num == num) {
+			printf("\nFound account:");
+			display_single(a);
+			found = 1;
+		}
+	}
+	if (found == 0) {
+		printf("Account not found.\n");
+	}
+}
+
+
+
+int main(void) {
+	struct bank *head = NULL;
+	int choice = 1;
+	while (choice != 0) {
+		choice = menu();
+
+		switch(choice) {
+		case 0:
+			break;
+		case 1:
+			add_account(&head);
+			break;
+		case 2:
+			display_all(head);
+			break;
+		case 3:
+			find_account(head);
+		}
+	}
+	return EXIT_SUCCESS;
+}
